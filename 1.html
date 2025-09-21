@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+      }
+      #navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #eae9e3;
+        height: 70px;
+        width: 100%;
+        padding: 0 20px;
+      }
+      .LuxeRealty {
+        margin-left: 100px;
+      }
+      .menu {
+        height: 40px;
+        width: 110px;
+        border-radius: 15px;
+        border: none;
+        background-color: white;
+        font-size: large;
+        margin-right: 40px;
+      }
+      .menu i {
+        font-size: larger;
+      }
+      #body1 {
+        display: flex;
+        background-color: #eae9e3;
+      }
+      .left {
+        background-color: #eae9e3;
+        height: 100%;
+        width: 50%;
+      }
+      .discover {
+        margin-top: 70px;
+        margin-left: 100px;
+        color: #395c1a;
+      }
+      .perfect {
+        margin-top: 5px;
+        margin-left: 100px;
+        color: #395c1a;
+      }
+      .perfect span {
+        color: #d65c16;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 40px;
+      }
+      .thrive {
+        margin-top: 5px;
+        margin-left: 100px;
+        color: #395c1a;
+      }
+      .explore {
+        margin-top: 15px;
+        margin-left: 100px;
+      }
+      .and {
+        margin-top: 8px;
+        margin-left: 100px;
+      }
+      .btn1 {
+        margin-top: 30px;
+        margin-left: 100px;
+        height: 40px;
+        width: 130px;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        background-color: black;
+      }
+      .btn2 {
+        margin-top: 30px;
+        margin-left: 100px;
+        height: 40px;
+        width: 45px;
+        border: none;
+        border-radius: 50%;
+        margin-left: 5px;
+        color: white;
+        background-color: black;
+      }
+      .image {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 90px;
+        margin-left: 100px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .img1,
+      .img2,
+      .img3 {
+        height: 60px;
+        width: 65px;
+        border-radius: 50%;
+        border: 1px solid black;
+      }
+      .img2,
+      .img3 {
+        margin-left: -100px;
+      }
+      .p1 {
+        margin-left: -70px;
+      }
+      .right {
+        height: 100%;
+        width: 50%;
+        padding: 30px;
+      }
+      .right img {
+        margin-top: 20px;
+        height: 100%;
+        width: 100%;
+        border-radius: 25px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+      }
+      #footerr {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+      }
+      #footerr .icon {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        height: 80px;
+        align-items: center;
+      }
+      .icon i {
+        background-color: white;
+        border-radius: 10%;
+      }
+      .home ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        gap: 40px;
+        list-style: none;
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+      .home ul li {
+        color: #999999;
+      }
+
+      /* 🔹 Responsive CSS 🔹 */
+      @media (max-width: 1024px) {
+        .LuxeRealty {
+          margin-left: 30px;
+        }
+        .menu {
+          margin-right: 20px;
+        }
+        #body1 {
+          flex-direction: column;
+        }
+        .left,
+        .right {
+          width: 100%;
+        }
+        .right {
+          padding: 15px;
+        }
+        .discover,
+        .perfect,
+        .thrive,
+        .explore,
+        .and,
+        .btn1,
+        .btn2,
+        .image {
+          margin-left: 30px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #navbar {
+          flex-direction: column;
+          height: auto;
+          padding: 10px;
+          gap: 10px;
+        }
+        .menu {
+          width: 100px;
+        }
+        .image {
+          margin-left: 0;
+          justify-content: center;
+        }
+        .img2,
+        .img3 {
+          margin-left: 0;
+        }
+        .p1 {
+          margin-left: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .perfect span {
+          font-size: 28px;
+        }
+        .btn1 {
+          width: 100px;
+          height: 35px;
+          font-size: 14px;
+        }
+        .btn2 {
+          width: 40px;
+          height: 35px;
+        }
+        .image {
+          flex-direction: column;
+          align-items: center;
+        }
+        .img1,
+        .img2,
+        .img3 {
+          margin-left: 0;
+        }
+        .right img {
+          height: auto;
+        }
+        .home ul {
+          gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h3 class="LuxeRealty">LuxeRealty</h3>
+      <h3 class="call"><i class="fa-solid fa-phone-volume"></i> 6262889900</h3>
+      <button class="menu">MENU <i class="fa-solid fa-compass"></i></button>
+    </div>
+
+    <div id="body1">
+      <div class="left">
+        <h1 class="discover">Discover the</h1>
+        <h1 class="perfect"><span>perfect place</span> to live</h1>
+        <h1 class="thrive">and thrive</h1>
+        <p class="explore">
+          Explore a curated selection of homes that fit your lifestyle
+        </p>
+        <p class="and">and preferences.</p>
+        <div class="btn">
+          <button class="btn1">View Listings</button>
+          <button class="btn2"><i class="fa-solid fa-right-long"></i></button>
+        </div>
+        <div class="image">
+          <img
+            class="img1"
+            src="https://enamai.lt/sites/default/files/redaktoriaus-failai/medinio_namo_statyba_1_5.jpg"
+            alt=""
+          />
+          <img
+            class="img2"
+            src="https://www.deodargroup.com/uploaded-files/thumb-cache/member_81/thumb---prefabricated-wooden-houses_3201.jpg"
+            alt=""
+          />
+          <img
+            class="img3"
+            src="https://static.tildacdn.one/tild6230-6438-4862-b531-616135323163/image.png"
+            alt=""
+          />
+          <p class="p1">More than <br />1000+ property</p>
+          <p class="p2">5/5 ⭐⭐⭐⭐⭐ <br />20 Review On Google</p>
+        </div>
+      </div>
+      <div class="right">
+        <img
+          src="https://tiimg.tistatic.com/fp/1/004/054/wooden-log-house-534.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div id="footerr">
+      <div class="icon">
+        <i class="fa-brands fa-2x fa-square-instagram"></i>
+        <i class="fa-brands fa-2x fa-facebook"></i>
+        <i class="fa-brands fa-2x fa-square-twitter"></i>
+        <i class="fa-brands fa-2x fa-google-plus"></i>
+        <i class="fa-brands fa-2x fa-youtube"></i>
+      </div>
+      <div class="home">
+        <ul>
+          <li>Home</li>
+          <li>News</li>
+          <li>About</li>
+          <li>Contact Us</li>
+          <li>Our Team</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
